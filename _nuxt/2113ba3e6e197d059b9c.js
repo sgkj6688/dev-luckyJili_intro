@@ -508,7 +508,7 @@
                 t.a = function(n, t) {
                     // runtimeConfig
                     var e = n.$config && n.$config.axios || {},
-                        u = e.browserBaseURL || e.browserBaseUrl || e.baseURL || e.baseUrl || "http://localhost:3000/";
+                        u = e.browserBaseURL || e.browserBaseUrl || e.baseURL || e.baseUrl || "http://localhost:8002/";
                     // baseURL
                     var r = I({
                         baseURL: u,
