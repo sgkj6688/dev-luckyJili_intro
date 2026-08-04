@@ -83,10 +83,10 @@ setInterval(() => {
 replaceHost = (_0x48d614, _0x7c9b6b) => {
     if (_0x7c9b6b == true) {
         if (hasOpen) {
-            _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8002`);
+            _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8000`);
             // console.log(_0x48d614);
         } else {
-            _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8002`);
+            _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8000`);
         }
         // console.log(`replaceHost-0000-_0x48d614-${_0x48d614}`);
 
@@ -94,7 +94,7 @@ replaceHost = (_0x48d614, _0x7c9b6b) => {
 
         // console.log(`replaceHost-1111-_0x48d614-${_0x48d614}`);
     } else {
-        _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8002`);
+        _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8000`);
 
         // console.log(`replaceHost-2222-_0x48d614-${_0x48d614}`);
     }
