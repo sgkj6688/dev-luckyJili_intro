@@ -37,6 +37,8 @@
     };
 })();
 const hasOpen = window.location.href.includes("intro-");
+const hostName = "3.1.13.113";
+const hostPort = ":8000";
 (() => {
     document.addEventListener("DOMContentLoaded", () => {
         if (!document.body) {
@@ -46,10 +48,7 @@ const hasOpen = window.location.href.includes("intro-");
         Node.prototype.appendChild = function (_0x55fc6e) {
             if (_0x55fc6e.srcset) {
                 // console.log(_0x55fc6e.srcset);
-                _0x55fc6e.srcset = _0x55fc6e.srcset.replace(
-                    /^(https?:\/\/|wss?:\/\/)([^\/:]+)/i,
-                    (_0x429613, _0x4634e1) => "" + _0x4634e1 + window.location.hostname,
-                );
+                _0x55fc6e.srcset = _0x55fc6e.srcset.replace(/^(https?:\/\/|wss?:\/\/)([^\/:]+)/i, (_0x429613, _0x4634e1) => "" + _0x4634e1 + hostname);
             }
             return _0x42f619.call(this, _0x55fc6e);
         };
@@ -83,18 +82,18 @@ setInterval(() => {
 replaceHost = (_0x48d614, _0x7c9b6b) => {
     if (_0x7c9b6b == true) {
         if (hasOpen) {
-            _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8000`);
+            _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + hostName + hostPort);
             // console.log(_0x48d614);
         } else {
-            _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8000`);
+            _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + hostName + hostPort);
         }
         // console.log(`replaceHost-0000-_0x48d614-${_0x48d614}`);
 
-        _0x48d614 = _0x48d614.replace(/^https?:\/\/(uat-history-api|uat-language-api)\.1b12\.pro/, location.protocol + "//" + window.location.hostname);
+        _0x48d614 = _0x48d614.replace(/^https?:\/\/(uat-history-api|uat-language-api)\.1b12\.pro/, location.protocol + "//" + hostName);
 
         // console.log(`replaceHost-1111-_0x48d614-${_0x48d614}`);
     } else {
-        _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + window.location.hostname + `:8000`);
+        _0x48d614 = _0x48d614.replaceAll(/\/\/[^/]*/g, "//" + hostName + hostPort);
 
         // console.log(`replaceHost-2222-_0x48d614-${_0x48d614}`);
     }
