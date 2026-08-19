@@ -842,7 +842,9 @@
                                             r = e.data;
                                         console.log("from postmessage receive data: ", r);
                                         try {
+                                            console.log("=====r==" + r);
                                             n = JSON.parse(r);
+                                            console.log("=====n==" + n);
                                         } catch (e) {
                                             console.log("parse postmessage receive data to object fail: ", e);
                                         }
