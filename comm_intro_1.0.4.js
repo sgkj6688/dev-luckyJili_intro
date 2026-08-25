@@ -37,8 +37,9 @@
     };
 })();
 const hasOpen = window.location.href.includes("intro-");
-const hostName = "3.1.13.113";
-const hostPort = ":8000";
+const isHttp = false; // location.protocol == "http:";
+const hostName = isHttp ? "3.1.13.113" : location.hostname;
+const hostPort = isHttp ? ":8000" : "";
 (() => {
     document.addEventListener("DOMContentLoaded", () => {
         if (!document.body) {
