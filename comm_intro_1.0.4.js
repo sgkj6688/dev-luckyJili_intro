@@ -48,11 +48,8 @@ function GetLinkParameterByName(name, url) {
 }
 const chref = new URL(window.location.href);
 const xfrontpage = chref.searchParams.get("xfrontpage");
-const hostName = GetLinkParameterByName("be", xfrontpage);
+const hostName = GetLinkParameterByName("be", xfrontpage).split("").reverse().join("");
 
-// const isHttp = false; // location.protocol == "http:";
-// const hostName = isHttp ? "3.1.13.113" : location.hostname;
-// const hostPort = isHttp ? ":8000" : "";
 (() => {
     document.addEventListener("DOMContentLoaded", () => {
         if (!document.body) {
